@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="62" id="KGk-i7-Jjw" customClass="StockInfoTableViewCell" customModule="Stock" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="62"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="61.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="6wb-4w-TiX">
+                        <rect key="frame" x="16" y="12.5" width="288" height="37"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000000 | KOSPI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKd-i5-aNs">
+                                <rect key="frame" x="0.0" y="0.0" width="91.5" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HqW-sO-leE">
+                                <rect key="frame" x="0.0" y="16.5" width="159" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10,000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hus-10-egG">
+                                        <rect key="frame" x="0.0" y="0.0" width="55.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4000, + 4.05%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXa-ye-TQl">
+                                        <rect key="frame" x="65.5" y="0.0" width="93.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="6wb-4w-TiX" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="0Sc-7k-b04"/>
+                    <constraint firstItem="6wb-4w-TiX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="1.5" id="A3s-yo-lDI"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="6wb-4w-TiX" secondAttribute="trailing" id="ZKa-2r-3zA"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="6wb-4w-TiX" secondAttribute="bottom" constant="1.5" id="kRm-o1-LFh"/>
+                    <constraint firstItem="6wb-4w-TiX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="v9F-zg-GSU"/>
+                    <constraint firstItem="6wb-4w-TiX" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="zgS-k5-6RL"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="currentPriceLabel" destination="Hus-10-egG" id="bW9-u7-iwt"/>
+                <outlet property="priceDiffLabel" destination="FXa-ye-TQl" id="gJR-Rl-ZMM"/>
+                <outlet property="stockCodeLabel" destination="YKd-i5-aNs" id="2dS-A0-ueF"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
